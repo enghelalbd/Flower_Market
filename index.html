@@ -3,26 +3,465 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flowe _Market</title>
-    
+    <title>Flower Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-noto-serif: "Noto Serif", "serif";
+        --font-inter: "Inter", "sans-serif";
+        --animate-spin-slow: spinSlow 4s linear infinite;
+      }
+
+      @keyframes spinSlow {
+        from {
+          rotate: 0deg;
+        }
+        to {
+          rotate: 360deg;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="headera1">
-          <div>logo</div>
-          <div>
-            <h2>Home</h2>
-            <h2>Shop</h2>
-            <h2>About-Us</h2>
-            <h2>Home</h2>
-          </div>
+  <body class="bg-[#f5f8ff]">
+    <header
+      class="max-w-285 mx-auto px-4 py-6 flex justify-between items-center"
+    >
+      <img src="assets/logo.png" alt="" />
+      <nav class="flex gap-8 items-center">
+        <ul class="flex gap-8 max-sm:hidden">
+          <li><a href="#" class="text-[#252432] font-inter">Home</a></li>
+          <li><a href="#" class="text-[#8987a1] font-inter">Shop</a></li>
+          <li><a href="#" class="text-[#8987a1] font-inter">About Us</a></li>
+        </ul>
+        <div class="flex gap-3 items-center">
+          <img class="size-6" src="assets/shopping-cart.png" alt="" />
+          <span class="font-inter">Cart ($56)</span>
         </div>
       </nav>
     </header>
-
-    <main></main>
-
-    <footer></footer>
+    <main class="space-y-20 mt-10">
+      <section
+        class="lg:max-w-285 lg:mx-auto lg:px-4 flex items-center justify-between max-lg:flex-col-reverse max-lg:gap-6"
+      >
+        <div class="flex-1 max-lg:px-4">
+          <h1 class="font-noto-serif text-2xl lg:text-[65px] font-bold mb-4">
+            ALWAYS <span class="text-[#e95a08]">FRESH<br />FLOWERS</span>
+          </h1>
+          <p class="font-inter text-sm lg:text-[22px] opacity-50">
+            Experience the magic of nature with our handpicked selection of
+            fresh flowers. Whether you're celebrating love, expressing sympathy,
+            or simply brightening someone's day, our blooms are perfectly
+            curated for every moment.
+          </p>
+        </div>
+        <img class="w-full flex-1" src="assets/hero-flower.png" alt="" />
+      </section>
+      <section class="max-w-285 mx-auto px-4">
+        <h2
+          class="text-center text-2xl lg:text-[50px] font-noto-serif font-bold mb-4"
+        >
+          <span class="text-[#e95a08]">Our</span> Plants
+        </h2>
+        <p
+          class="font-inter text-sm lg:text-[22px] opacity-50 text-center max-w-222 mx-auto mb-10"
+        >
+          Discover our carefully curated collection of beautiful plants and
+          flowers. From vibrant seasonal blooms to elegant indoor plants, we
+          have something special for every space and occasion.
+        </p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <div>
+            <img
+              class="w-full mb-6"
+              src="assets/sample-flower-image.png"
+              alt=""
+            />
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-medium mb-1"
+            >
+              Lily Blossom
+            </p>
+            <p
+              class="text-[#111] lg:text-[22px] text-center font-inter font-bold mb-4"
+            >
+              20 USD
+            </p>
+            <button
+              type="button"
+              onclick="alert('Flower Added to Cart')"
+              class="w-full text-center bg-[#e95a08] text-white font-inter font-semibold p-3 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-285 mx-auto px-4 grid lg:grid-cols-2 gap-6 lg:gap-20 place-items-center"
+      >
+        <figure class="w-full relative">
+          <img src="assets/flower-store.png" class="w-full" alt="" />
+          <img
+            src="assets/trusted-badge.png"
+            class="max-lg:hidden absolute -top-24 -right-24 size-60 animate-spin-slow"
+            alt=""
+          />
+        </figure>
+        <div class="w-full">
+          <h2 class="font-noto-serif text-2xl lg:text-[50px] font-bold mb-3">
+            Why Choose Our Flowers
+          </h2>
+          <ul class="list-disc px-6 space-y-4">
+            <li class="opacity-50 text-sm lg:text-[22px]">
+              Fresh daily deliveries ensure our flowers stay vibrant and
+              beautiful for longer.
+            </li>
+            <li class="opacity-50 text-sm lg:text-[22px]">
+              Expert florists with years of experience in creating stunning
+              arrangements.
+            </li>
+            <li class="opacity-50 text-sm lg:text-[22px]">
+              Sustainable practices and locally sourced flowers whenever
+              possible.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="max-w-285 mx-auto px-4">
+        <h2
+          class="text-center text-2xl lg:text-[50px] font-noto-serif font-bold mb-4"
+        >
+          <span class="text-[#e95a08]">Latest</span> Deals
+        </h2>
+        <p
+          class="font-inter text-sm lg:text-[22px] opacity-50 text-center max-w-222 mx-auto mb-10"
+        >
+          Don't miss out on our special offers and seasonal discounts. Find the
+          perfect flowers for any occasion at prices that will make you smile.
+          Check out our latest deals and save on beautiful blooms.
+        </p>
+        <div class="flex max-lg:flex-col gap-6">
+          <div class="space-y-6 lg:flex-1">
+            <div
+              class="bg-[url(assets/deal-bloom.png)] bg-cover bg-center bg-no-repeat w-full h-48 rounded-xl overflow-hidden"
+            >
+              <div
+                class="bg-black/40 size-full flex flex-col gap-4 justify-center items-center text-white p-4 text-center"
+              >
+                <p class="font-noto-serif font-bold text-xl">
+                  60% Off | Bloom Plant
+                </p>
+                <a href="#" class="font-inter font-semibold underline"
+                  >Shop Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-[url(assets/deal-ana.png)] bg-cover bg-center bg-no-repeat w-full h-48 rounded-xl overflow-hidden"
+            >
+              <div
+                class="bg-black/40 size-full flex flex-col gap-4 justify-center items-center text-white p-4 text-center"
+              >
+                <p class="font-noto-serif font-bold text-xl">
+                  30% Off | Ana Plant
+                </p>
+                <a href="#" class="font-inter font-semibold underline"
+                  >Shop Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[url(assets/deal-zabo.png)] bg-cover bg-center bg-no-repeat w-full h-48 lg:h-auto rounded-xl overflow-hidden lg:flex-2"
+          >
+            <div
+              class="bg-black/40 size-full flex flex-col gap-2 justify-center items-center text-white p-4 text-center"
+            >
+              <p class="font-noto-serif font-bold text-xl lg:text-[40px]">
+                25% Off | Zabo Plant
+              </p>
+              <a
+                href="#"
+                class="font-inter font-semibold underline lg:text-[28px]"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[url(assets/news-letter-bg.png)] bg-cover bg-center bg-no-repeat"
+      >
+        <div
+          class="bg-[#07334f]/40 size-full text-white flex flex-col justify-center items-center text-center px-4 py-30 max-lg:pb-12"
+        >
+          <h2 class="font-noto-serif font-bold text-xl lg:text-[50px] mb-6">
+            Join the colorful Bunch
+          </h2>
+          <form action="" class="w-full max-w-207.5 flex">
+            <input
+              class="w-full bg-white outline-none p-4 placeholder:text-[#000]/50 text-black font-inter"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Write email"
+            />
+            <button
+              type="submit"
+              class="text-center bg-[#e95a08] text-white font-inter font-semibold py-3 px-2 lg:px-10 cursor-pointer duration-500 hover:bg-[#da4204]"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#fafcff]">
+      <div class="max-w-285 mx-auto px-4 py-6 flex max-lg:flex-col gap-6">
+        <div class="lg:flex-3">
+          <img src="assets/logo.png" alt="" />
+          <p class="font-inter lg:text-[22px] text-black/50 mt-4">
+            Bringing beauty and freshness to your doorstep since 1995. Your
+            trusted source for premium flowers and exceptional service.
+          </p>
+        </div>
+        <div class="lg:flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Home</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Blog</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">FAQ</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Features</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Pricing</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">Help Center</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:flex-1">
+          <ul class="flex lg:justify-end items-center gap-6">
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">
+                <img src="assets/icon-linkedin.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">
+                <img src="assets/icon-twitter.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">
+                <img src="assets/icon-facebook.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="font-inter text-[#6b7280]" href="#">
+                <img src="assets/icon-youtube.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
